@@ -1,0 +1,21 @@
+{
+  "name": "ezync",
+  "version": "1.0.0",
+  "description": "Sync your local dir with a remote server securely without hassle",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Aumala",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "bin": {
+    "ezync": "src/ezync"
+  },
+  "dependencies": {
+    "toml": "^3.0.0",
+    "yargs": "^17.7.2"
+  }
+}
