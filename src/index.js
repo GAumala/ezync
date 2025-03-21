@@ -17,13 +17,14 @@ async function main () {
   const profile = requireProfile(config, argv.profile)
 
   const cmd = argv._[0]
+  const opts = { delete: argv.delete, force: argv.force }
   switch (cmd) {
     case 'push': {
-      await rsync.sync(profile.local, profile.remote)
+      await rsync.sync(profile.local, profile.remote, opts)
       break
     }
     case 'pull': {
-      await rsync.sync(profile.remote, profile.local)
+      await rsync.sync(profile.remote, profile.local, opts)
       break
     }
     default: {
